@@ -3,25 +3,16 @@
 # ========================
 .env                # Lokale Umgebungsvariablen (API-Keys, Passwörter)
 *.env               # Alle .env Dateien
-!.env.example       # AUSNAHME: .env.example soll versioniert werden (als Vorlage)
+!.env.sample        # AUSNAHME: .env.sample soll versioniert werden (als Vorlage)
 
 # ========================
-# Python
+# ASP.NET Core / Blazor
 # ========================
-__pycache__/        # Python Bytecode Cache (wird automatisch generiert)
-*.py[cod]           # Python kompilierte Dateien (.pyc, .pyo, .pyd)
-*.pyo               # Python optimierte Bytecode Dateien
-*.pyd               # Python Erweiterungsmodule (Windows)
-.Python             # Python Installer Verzeichnis
-venv/               # Python Virtual Environment
-.venv/              # Alternative Virtual Environment Bezeichnung
-env/                # Alternative Environment Verzeichnis
-ENV/                # Alternative Environment (Großbuchstaben)
-*.egg-info/         # Python Package Metadata
-dist/               # Distribution/Build-Verzeichnis (Wheel, Tarball)
-build/              # Build-Verzeichnis (temporäre Dateien beim Build)
-.pytest_cache/      # Pytest Cache (Testlauf-Zwischenspeicher)
-*.log               # Log-Dateien (Debug, Error Logs)
+bin/                # Kompilierte Ausgabe (wird beim Build generiert)
+obj/                # Zwischendateien beim Build (Roslyn, Razor-Generierung)
+.vs/                # Visual Studio lokale Einstellungen (Solution Explorer State etc.)
+*.user              # Benutzerspezifische Projekteinstellungen
+*.pfx               # SSL-Zertifikate (enthalten privaten Schlüssel, nie ins Repo)
 
 # ========================
 # Datenbank (lokal, nicht ins Repo)
@@ -29,6 +20,8 @@ build/              # Build-Verzeichnis (temporäre Dateien beim Build)
 *.db                # SQLite Datenbank Dateien
 *.sqlite            # SQLite Datenbank (alte Extension)
 *.sqlite3           # SQLite3 Datenbank Dateien (aktuelle Standard)
+*.db-shm            # SQLite Shared Memory (WAL-Modus, wird automatisch erstellt)
+*.db-wal            # SQLite Write-Ahead Log (WAL-Modus, wird automatisch erstellt)
 
 # ========================
 # VS Code
@@ -38,12 +31,6 @@ build/              # Build-Verzeichnis (temporäre Dateien beim Build)
 !.vscode/settings.json.example  # AUSNAHME: Beispiel-Einstellungen zur Referenz
 
 # ========================
-# CircuitPython / MicroPython
-# ========================
-*.mpy               # MicroPython kompilierte Dateien
-CIRCUITPY/          # CircuitPython Board Mount-Punkt (wird automatisch erstellt)
-
-# ========================
 # macOS / Windows
 # ========================
 .DS_Store           # macOS Verzeichnis-Metadaten (versteckt)
@@ -51,7 +38,7 @@ Thumbs.db           # Windows Thumbnail Cache
 desktop.ini         # Windows Desktop Einstellungen (versteckt)
 
 # ========================
-# Node (falls Frontend-Tools genutzt werden)
+# Node (für späteres Frontend)
 # ========================
 node_modules/       # NPM Abhängigkeiten (werden via package.json installiert)
 npm-debug.log       # NPM Debug Log-Datei
