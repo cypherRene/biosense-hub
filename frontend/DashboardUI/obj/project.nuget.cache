@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Q8s/wnl65V0=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\muhic\\Documents\\Projekte\\Biosense-Hub\\frontend\\DashboardUI\\DashboardUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\muhic\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.9\\microsoft.aspnetcore.app.internal.assets.10.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}
